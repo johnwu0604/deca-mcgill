@@ -1,0 +1,102 @@
+div.timeline-panel{
+  background-image: url("background2.jpg");
+  opacity: 50%;
+}
+article{
+  background-image:url("background3.jpg"); 
+  opacity:50%;
+}
+
+
+article{
+  border: ridge;
+  padding: 0px 40px 0px 40px;
+  margin-left:10%;
+  margin-right: 20%;
+  margin-top:10px;
+}
+
+/*Author names style */
+#disc article > h4{
+  text-decoration: underline;
+  color:brown;
+}
+#ann article >h4{
+  text-decoration: underline;
+  color: #0000cc;
+}
+
+.new_thread_text{
+  overflow: hidden;
+   z-index:1000;
+  width: 550px ;
+}
+
+.new-thread{
+  float: right;
+  position: relative;
+  margin-right: 30%;
+}
+
+h2{
+  font-size: 2em;
+  margin-left: 10%;
+}
+
+h1{
+  font-weight:bold;
+}
+.comments-container{
+  position:relative;
+}
+/*ul.sidebar-nav>li():hover{
+  background-color:#337AB7!important;
+  cursor:pointer;
+}*/
+#discussion{
+  margin-top: 20%;
+}
+button{
+  z-index:5;
+
+}
+
+/*Discussion section*/
+article>hr{
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+.remove{
+  float:right;
+  background-image: url("remove.jpg");
+  width:20px;
+  height:20px;
+  background-size: 20px auto;
+  border:none;
+}
+
+
+.remove:hover{
+  cursor: pointer;
+}
+
+#btn_comment{
+  position:relative;
+  float:right;
+  margin-bottom: 2%;
+}
+
+.text_comment{
+  overflow:hidden;
+  width:85%;
+  border-style: solid;
+  overflow:auto;
+  margin-top:0px;
+  z-index:1000;
+}
+
+textarea{
+ margin: 10px;
+ width:800px;
+}

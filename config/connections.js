@@ -28,9 +28,13 @@ module.exports.connections = {
   * Installed by default.                                                    *
   *                                                                          *
   ***************************************************************************/
-  localDiskDb: {
-    adapter: 'sails-disk'
-  },
+  hostedDB: {
+    adapter: 'sails-mysql',
+    host: 'sql.decamcgill.com',
+    user: 'decamcgill',
+    password: '$%fscxa`a@',
+    database: 'decamcgilldashboarddb'
+  }
 
   /***************************************************************************
   *                                                                          *
