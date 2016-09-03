@@ -1,0 +1,22 @@
+ /*full page layout*/
+button {
+	height: 50px;
+	width: 180px;
+	border-radius: 5px;
+	padding: 0;
+	margin: 2% 0 0 0;
+	display: inline-block;
+	font-size: 1.3rem;
+	cursor: pointer;
+	background-color: red;
+}
+
+
+.menu {
+	display: inline-block;
+	width: 20%;
+	float: left;
+	font-size: 0.8em;
+	border-right: 2px dashed #ccc;
+	margin-top: 80px;
+}
