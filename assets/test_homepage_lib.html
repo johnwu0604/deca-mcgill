@@ -1,0 +1,588 @@
+<!--template: replace  with username; indicates loop insertion position TWICElete & to disable register button-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Home Page</title>
+
+  <!-- Bootstrap Core CSS -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <!-- <link href="css/discussion.css" rel="stylesheet"> -->
+  <link href="css/home_page.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link href="css/timeLine.css" rel="stylesheet" type="text/css">
+        <link href="css/members_cont.css" rel="stylesheet" type="text/css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Test Temporary CSS -->
+        <style type="text/css">
+
+       /* .footer{
+          position: absolute;
+          bottom:0px;
+          right: 50%;
+          text-align: right;
+          }*/
+          .sidebar-brand>a{
+            color: #D20303 !important;
+          }
+
+          
+          #Home{
+            background-color: #3d3d5c;
+          }
+
+          .sidebar-nav >li> a{
+            color: white;
+          }
+
+
+          textarea{
+            margin: 10px;
+            width:800px;
+          }
+
+          </style>
+
+
+
+
+        </head>
+
+        <body>
+
+          <div id="wrapper">
+
+            <!--  ========================= Sidebar =========================-->
+            <div id="sidebar-wrapper">
+              <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                  <a href="index.html">   <!--link to landing page-->
+                    DECA McGill
+                  </a>
+                </li>
+                <li id="Home">
+                  <a href="#">Home</a>
+                </li>
+                <li id="Doc">
+                  <a href="#">Documents</a>
+                </li>
+                <li id="dis">
+                  <a href="#">Discussion</a>
+                </li>
+                <li id="Events">
+                  <a href="#">Events</a>
+                </li>
+                <li id="members">
+                  <a href="#">Members</a>
+                </li>
+                <li id="Contact">
+                  <a href="#">Team Contact</a>
+                </li>
+                <li id="settings">
+                  <a href="#">Personal Settings</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /#sidebar-End -->
+
+
+            <!--=======================  Page Content ======================= -->
+            <div id="page-content-wrapper">
+              <div class="container-fluid">
+
+                <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
+                
+                <!--=========== Main Home Page ========-->
+                <div class="col-lg-12 container" id="main">
+
+
+                  <div class="page-header"><h1>Welcome JC!</h1></div>
+                  <p>You're now at DECA McGill Member's Hub :D</p>
+                  
+                  
+                  <div class="panel panel-success">
+                    <div class="panel panel-heading"> Registered Events</div>
+                    <!--Loop insertion place-->
+                    
+
+<div class="panel-body">Event3
+		<form action="cgi-bin/cancel_events.py" method="get">
+		<input type="hidden" name="id" value="40000">
+		<input type="hidden" name="event_name" value="Event3">
+		<button type="submit" class="btn btn-danger btn-xs">Cancel</button>
+		</form></div>
+<div class="panel-body">Event4
+		<form action="cgi-bin/cancel_events.py" method="get">
+		<input type="hidden" name="id" value="40000">
+		<input type="hidden" name="event_name" value="Event4">
+		<button type="submit" class="btn btn-danger btn-xs">Cancel</button>
+		</form></div>
+
+                    <!--Loop End -->
+                  </div>
+                </div> <!-- Main Home Container End -->
+
+                <!---========TimeLine: all wrapped into .Timeline_block========-->
+                <div class="col-lg-12 container" id="event_cont">
+                  <div class="page-header">  <h2 id="timeline">Events Timeline</h2>
+                  </div>
+                  <ul class="timeline">
+                    <!--Events to Regester-->
+                     
+		<li class="timeline-inverted">
+		<div class="timeline-badge"><i class="glyphicon glyphicon-edit"></i></div>
+		<div class="timeline-panel">
+		<div class="timeline-heading">
+		<h4 class="timeline-title"><a href="#" target="_blank">Event1</a></h4>
+		<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> October 2016</small></p>
+		</div>
+		<div class="timeline-body">
+		<p>Just some workshops </p>
+		<form action="cgi-bin/register_events.py" method="post">
+		<input type="hidden" name="id" value="40000" >
+		<input type="hidden" name="event_name" value="Some Workshop">
+		<button type="submit" value="submit" >Register</button>
+		</form> 
+		</div>
+		</div>
+		</li>
+		 
+		<li class="timeline-inverted">
+		<div class="timeline-badge"><i class="glyphicon glyphicon-edit"></i></div>
+		<div class="timeline-panel">
+		<div class="timeline-heading">
+		<h4 class="timeline-title"><a href="#" target="_blank">Event2</a></h4>
+		<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> December 2016</small></p>
+		</div>
+		<div class="timeline-body">
+		<p>Another competition </p>
+		<form action="cgi-bin/register_events.py" method="post">
+		<input type="hidden" name="id" value="40000" >
+		<input type="hidden" name="event_name" value="Some Workshop">
+		<button type="submit" value="submit" >Register</button>
+		</form> 
+		</div>
+		</div>
+		</li>
+		
+                    <!-- <li class="timeline-inverted">
+                      <div class="timeline-badge"><i class="glyphicon glyphicon-edit"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title"><a href="#" target="_blank">Some Workshop</a></h4>
+                          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> October 2016</small></p>
+                        </div>
+                        <div class="timeline-body">
+                          <p>Workshop Details: </p>
+                          <form action="register_events.py" method="post">
+                            <input type="hidden" name="id" value="#" >
+                            <input type="hidden" name="event_name" value="Some Workshop">
+                            <button type="submit" value="submit" &disabled>Register</button>
+                          </form> 
+                        </div>
+                      </div>
+                    </li> -->
+                    <!--  Loop End -->
+
+                    <!--Events in past-->
+                    <li>
+                      <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title"><a href="https://www.facebook.com/events/1572900532948546/" target="_blank">Spring Invitational</a></h4>
+                          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> March 2016</small></p>
+                        </div>
+                        <div class="timeline-body">
+                          <p>WTFFFFF TESTTTTT</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="timeline-inverted">
+                      <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title">In House Competition</h4>
+                          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> November 2015</small></p>
+                        </div>
+                        <div class="timeline-body">
+                          <p>Something happened Last year</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div> <!--  Timeline container Wrapper end -->
+
+
+                <!--======== Discussion Board======== -->
+                <div class="container col-lg-12" id="dis_cont">
+                  <div class="comments-container">
+                    <h2>Announcements</h2>
+                    <!-- TO-DO: Read announcements from announce.txt-->
+
+                    <!-- Post current announcements -->
+                    <section id="ann" class="comments col-lg-12">
+
+                      
+		<article>
+		<h4>Juncheng Zhan:<button type="button"  data-toggle="modal" 
+			data-target="#delAnnounce" class="remove" id="Juncheng Zhan 2016-06-09 15:12:31"></button>
+			</h4><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016-06-09 15:12:31</small>
+		<br>
+		<p>test again hohoho</p>
+		</article>
+		<article>
+		<h4>Jing Liu:</h4><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016-06-09 15:11:13</small>
+		<br>
+		<p>test hehehe</p>
+		</article> <!-- Loop Announcements. NOTE: remove button only show when it's the right username . Button ID: name + time-->
+                      <!-- <article >
+                        <h4>Jing Liu:<button type="button"  data-toggle="modal" data-target="#delAnnounce" class="remove" id="$$$"></button></h4><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016-06-09 15:12:31</small>
+                        <br>
+                        <p>This is a test announcenment!!!!</p>
+                      </article> -->
+                      <!--  Loop Ends -->
+                      <br>
+                      
+                      <!-- Add announcements -->
+                      <!-- Button Trigger -->
+                      <button type="button" class="btn btn-primary btn-sm new-thread" data-toggle="modal" data-target="#newAnnounce">
+                        New Announcement
+                      </button>
+                    </section>
+                    <!-- New Announcement Modal Content -->
+                    <div class="modal fade" id="newAnnounce" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <form action="cgi-bin/add_announce.py", method="post" id="post_announce">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel">New Announcement</h4>
+                            </div>
+                            <div class="modal-body">
+                              <input type="hidden" name="username" value="JC">
+                              <textarea rows="4" col="13" name="announce" form="add_announce" class="new_thread_text"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              <button type="submit" value="submit" class="btn btn-primary">Post</button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- New Announcement Modal End -->
+
+                    <!-- Delete Post Modal -->
+                    <div class="modal fade" id="delAnnounce" role="dialog">
+                      <div class="modal-dialog modal-sm">
+                        <form action="cgi-bin/del_post.py" method="post" id="del_announce">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Delete</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>Are you sure to delete this post?</p>
+                              <!-- TO-THINK: Identify which post to delete -->
+                            <input type="hidden" value="" name="postID" id="postID">
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" value="submit" class="btn btn-primary" id="del_btn">Delete</button>
+                          </div>
+                        </div>
+                      </form>
+                      </div>
+                    </div><!-- Delete Announcement Modal End -->
+
+
+                    <!-- Discussion Section -->
+                    <br>
+                    <h2>Discussion</h2>
+
+
+                    <!-- Posted discussion -->
+                    <section id="disc" class="comments col-lg-12">
+
+                      
+		<article>  
+                        <h4>Juncheng Zhan:<button type="button"  data-toggle="modal" 
+			data-target="#delAnnounce" class="remove" id="Juncheng Zhan 2016-06-12 19:42:39"></button>
+			</h4><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016-06-12 19:42:39</small>
+                        <br>
+                        <p>test a line without comments</p>
+                        <button type="button" class="btn btn-xs" data-toggle="collapse" data-target="#dis0">View Comments</button>
+                        <hr>
+                        <div id="dis0" class="collapse">
+                          <p><span style="text-decoration:underline">
+			Wenyuan Li:</span><br><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 
+			2016-06-12 19:46:03</small><br>test again and again twice hohoho23333333333333333333333333</p>
+			
+                          <div class="row">
+                          <form action="cgi-bin/add_comment.py" method="post" id="add_comment">
+                            <input type="hidden" name="username" value="JC">
+                            <input type="hidden" name="threadID" value="Juncheng Zhan 2016-06-12 19:42:39">  
+                            <textarea rows="1" col="10" name="comment" form="add_comment" class="text_comment form-control" placeholder="Click here to enter comments..."></textarea>
+                            <button class="btn btn-xs btn-primary" type="submit" value="submit" id="btn_comment">Comment</button>
+                          <form>
+                          </div>
+                        </div>
+                      </article>
+		
+
+		<article>  
+                        <h4>Mathieu RL:</h4><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016-06-12 19:49:56</small>
+                        <br>
+                        <p>Try this super long line and add some comments to it !!!</p>
+                        <button type="button" class="btn btn-xs" data-toggle="collapse" data-target="#dis1">View Comments</button>
+                        <hr>
+                        <div id="dis1" class="collapse">
+                          
+                          <div class="row">
+                          <form action="cgi-bin/add_comment.py" method="post" id="add_comment">
+                            <input type="hidden" name="username" value="JC">
+                            <input type="hidden" name="threadID" value="Mathieu RL 2016-06-12 19:49:56">  
+                            <textarea rows="1" col="10" name="comment" form="add_comment" class="text_comment form-control" placeholder="Click here to enter comments..."></textarea>
+                            <button class="btn btn-xs btn-primary" type="submit" value="submit" id="btn_comment">Comment</button>
+                          <form>
+                          </div>
+                        </div>
+                      </article>
+		 <!-- Loop Discussion -->
+                      <!-- Button ID: name + time -->
+                     <!--  <article>  
+                        <h4>Jing Liu:<button type="button"  data-toggle="modal" data-target="#delAnnounce" class="remove" id="%%%"></button></h4><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016-06-09 15:12:31</small>
+                        <br>
+                        <p>This is a test Discussion with commments!!!!</p>
+                        <button type="button" class="btn btn-xs" data-toggle="collapse" data-target="#demo">View Comments</button>
+                        <hr>
+                        <div id="demo" class="collapse">
+                          <p><span style="text-decoration:underline">Juncheng Z:</span><br><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016-06-010 05:12:31</small><br>This is some test comments 1111111</p>
+                          <p><span style="text-decoration:underline">Wenyuan L:</span><br><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2016-06-010 05:50:32</small><br>This is some other comments again 22222</p>
+                          
+                          <div class="row">
+                          <form action="cgi-bin/add_comment.py" method="post" id="add_comment">
+                            <input type="hidden" name="username" value="USERNAME">
+                            <input type="hidden" name="threadID" value="%%%">  
+                            <textarea rows="1" col="10" name="comment" form="add_comment" class="text_comment form-control" placeholder="Click here to enter comments..."></textarea>
+                            <button class="btn btn-xs btn-primary" type="submit" value="submit" id="btn_comment">Comment</button>
+                          <form>
+                           >
+                          </div>
+                        </div>
+                      </article> -->
+                      <!--  Loop Ends -->
+                      <br>
+                      
+                      <!-- Add Thread -->
+                      <!-- Button Trigger -->
+                      <button type="button" class="btn btn-primary btn-sm new-thread" data-toggle="modal" data-target="#myModal">
+                        New Thread
+                      </button>
+                    </section>
+                    <!-- Modal Content -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <form action="cgi-bin/add_thread.py", method="post" id="add_thread">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel">New Thread</h4>
+                            </div>
+                            <div class="modal-body">
+                              <input type="hidden" name="username" value="JC">
+                              <textarea rows="4" col="13" name="thread" form="add_thread" class="new_thread_text"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              <button type="submit" value="submit" class="btn btn-primary">Post</button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    
+                    <!-- Discussion container end -->
+                  </div>
+                </div> <!-- Announcement & Discussion Board Container End -->
+                <!--========Members Information Table Container ========-->
+                <div class="col-lg-12 container" id="members_cont">
+
+                  <table class="table table-hover">
+                    <caption>Member Contacts</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col" >Faculty</th>
+                        <th scope="col" >Category</th>
+                        <th scope="col">Contact</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-body">
+
+                      <tr>
+			<td scope="row" data-label="Name"> Jing Liu</td>
+			<td scope="row" data-label="Faculty"> Science,CS</td>
+			<td scope="row" data-label="Category"> Law</td>
+			<td scope="row" data-label="Contact"> jing6666@another.com</td>
+			</tr>  <tr>
+			<td scope="row" data-label="Name"> Mathieu RL</td>
+			<td scope="row" data-label="Faculty"> Arts</td>
+			<td scope="row" data-label="Category"> Marketing</td>
+			<td scope="row" data-label="Contact"> math@example.com</td>
+			</tr>  <tr>
+			<td scope="row" data-label="Name"> Cheryl Li</td>
+			<td scope="row" data-label="Faculty"> Science</td>
+			<td scope="row" data-label="Category"> Human Resource</td>
+			<td scope="row" data-label="Contact"> yli@mcgill.ca</td>
+			</tr>  <tr>
+			<td scope="row" data-label="Name"> Juncheng Zhan</td>
+			<td scope="row" data-label="Faculty"> Engineering</td>
+			<td scope="row" data-label="Category"> Business Law</td>
+			<td scope="row" data-label="Contact"> junchengz@andrew.cmu.edu</td>
+			</tr>  <tr>
+			<td scope="row" data-label="Name"> Wenyuan Li</td>
+			<td scope="row" data-label="Faculty"> Science, Math</td>
+			<td scope="row" data-label="Category"> Marketing</td>
+			<td scope="row" data-label="Contact"> liwenyuan@qq.com</td>
+			</tr>  <tr>
+			<td scope="row" data-label="Name"> jingyun liu</td>
+			<td scope="row" data-label="Faculty"> Engi</td>
+			<td scope="row" data-label="Category"> Law</td>
+			<td scope="row" data-label="Contact"> test@test.com</td>
+			</tr>  <!--  Read File login_info.txt And Loop Thru -->
+
+                     <!--  Loop Ends -->
+                   </tbody>
+                 </table>
+
+               </div> <!--  Members Container End -->
+
+
+               <!-- ========Executive Team Contact Container ========-->
+               <div class="col-lg-12 container" id="exe_contact_cont">
+                <table class="table table-hover">
+                  <caption>Executive Team Contacts</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col" >Position</th>
+                      <th scope="col" >Email</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table-body">
+
+                   <tr>
+		<td scope="row" data-label="Name">John Wu</td>
+			<td scope="row" data-label="Position">Co-President</td>
+			<td scope="row" data-label="Email">john@mail.mcgill.ca</td>
+			</tr> <tr>
+		<td scope="row" data-label="Name">Jillian Shao</td>
+			<td scope="row" data-label="Position">Co-President</td>
+			<td scope="row" data-label="Email">jillian@mail.mcgill.ca</td>
+			</tr> <tr>
+		<td scope="row" data-label="Name">Jing Liu</td>
+			<td scope="row" data-label="Position">Technical Director</td>
+			<td scope="row" data-label="Email">liujingyun0209@gmail.com</td>
+			</tr> <tr>
+		<td scope="row" data-label="Name">Victoria Wang</td>
+			<td scope="row" data-label="Position">VP Communication</td>
+			<td scope="row" data-label="Email">victoria@mail.mcgill.ca</td>
+			</tr>  <!--  Read File exeTeam_info.txt And Loop Thru -->
+                   <!--  Loop Ends -->
+                 </tbody>
+               </table>
+             </div> <!-- Executive Team Contact Container End -->
+
+             <!-- ========Personal Settings Container ========-->
+             <div class="col-lg-12 container" id="settings_cont">
+              <form action="cgi-bin/change_settings.py" method="post">
+               <!--  login info/hidden field need to be changed accordingly -->
+               <input type='hidden' name='old_usrName' value="JC">
+               <div class="row">
+                <div class="page-header"><h2>Change Your Personal Information</h2></div>
+
+                <div class="col-xs-6">
+                  <div class="col-xs-12"  class="form-group">
+                    <br>
+                    <br>
+                    <label for="usr">Change User Name:</label>
+                    <input type="text" class="form-control" name="usr">
+                  </div>
+
+                  <div class="col-xs-12">
+                    <br>
+                    <br>
+                    <label for="pwd">Change Password:</label>
+                    <input type="password" class="form-control" name="pwd">
+                  </div>
+
+                  <div class="col-xs-12">
+                    <br>
+                    <br>
+                    <label for="pwd">Change Email Address:</label>
+                    <input type="text" class="form-control" name="email" name="email">
+                  </div>
+                  <br>
+                  <br>
+                  <div class="col-xs-12">
+                    <br>
+                    <br>
+                    <label for="pwd">Change Category:</label>
+
+                    <br>
+                    <!-- Case Category to choose -->
+                    <select name="category">
+                      <option selected>Choose New Category</option>
+                      <option value="Human Resource">Human Resources</option>
+                      <option value="Business Law"> Business Law</option>
+                      <option value="Marketing"> Marketing </option>
+                    </select>
+                  </div>
+
+                  <div class="col-xs-12">
+                    <br>
+
+                    <br>
+                    <button id="submit" type="submit" class="btn btn-default">Change Settings</button>
+                  </div>
+                </div>
+              </form> 
+            </div><!--  personal settings container end -->
+
+          </div> <!-- container-fluid end -->
+        </div>
+        <!-- /#page-content-wrapper end -->
+      </div>
+      <!-- /#wrapper -->
+
+
+      <!-- Customized JavaScript -->
+      <script src="js/home_page.js"></script>
+    </body>
+
+    </html>

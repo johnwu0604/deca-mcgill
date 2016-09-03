@@ -1,0 +1,188 @@
+	<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<title>Membership SignUp</title>
+		<link href="favicon.png" rel="shortcut icon" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/index_main.css" rel="stylesheet" type="text/css">
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+		<!-- stripe.js: handle sensitive card data and return token -->
+		<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+		<!-- TO-DO: Replace key with actual publishable API key -->
+					<!-- Current: Test publishable API key -->
+		<script type="text/javascript"> Stripe.setPublishableKey('pk_test_uLu4FfUMxbGBLl3R5Wli1ssu'); </script>
+
+		<script type="text/javascript" src="js/index_main.js"></script>
+
+
+		<!--CSS test-->
+		<style>
+			button{
+				float: left;
+				margin-top: 2%;
+
+			}
+			form{
+				margin-top: 10%;
+			}
+			select{
+				padding: 5px;
+				border-radius: 6px;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<!-- top nav-bar -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class="navbar-brand" href="#">DECA McGill</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li id="home"><a href="index.html">Home</a></li>
+						<li><a href="index.html#intro">Introduction</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Events <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Event1</a></li>
+								<li><a href="#">Event2</a></li>
+								<li><a href="#">Event3</a></li>
+							</ul>
+						</li>
+						<li><a href="index.html#team">Team</a></li>
+						<li><a href="#sponsors">Sponsors</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="./signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+
+						<li id="login-choice" ><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					</ul>
+				</div>
+			</div> <!-- end container -->
+		</nav>  <!-- end top nav bar -->
+
+		 <!-- Login: FadeToggle Part -->
+    <div id="login">
+            <!-- Modal content-->
+            <form action="login.py" method="post">
+                        <label name="username">Username:</label> 
+                        <input type="text" name="username"><br>
+                        <label name="pwd">Password:</label> 
+                        <input type="password" name="pwd">
+                        <br>
+                    
+                        <button class="btn btn-default" type="submit" value="Submit" >Login</button>
+            </form>
+        
+    </div>
+
+		<!-- form of information and payment -->
+
+		<div class="container">
+
+			<form action="cgi-bin/member_signup.py" method="get">
+
+				<div class="row">
+					<h2>Registration Form</h2>
+					<h4 class="col-xs-12">  Personal Information: </h4>
+					<div class="col-xs-4">
+						<label for="pwd">First Name:</label>
+						<input type="text" class="form-control" name="firstName">
+					</div>
+					<div class="col-xs-4">
+						<label for="pwd">Last Name:</label>
+						<input type="text" class="form-control" name="lastName">
+					</div>
+
+					<div class="col-xs-4">
+						<label for="pwd">Email Address:</label>
+						<input type="text" class="form-control" name="email" id="email">
+					</div>
+
+					<div class="col-xs-6">
+						<label for="program">Faculty and Program:</label>
+						<input type="text" class="form-control" name="faculty" id="email">
+					</div>
+
+					<div class="col-xs-12">
+						<label for="pwd">Choose Your Category:</label>
+						
+						<br/>
+						<!-- Case Category to choose -->
+						<select name="category">
+							<option selected>Choose Category</option>
+							<option value="Human Resource">Human Resources</option>
+							<option value="Business Law"> Business Law</option>
+							<option value="Marketing"> Marketing </option>
+						</select>
+					</div>
+				</div>
+				<br>
+				<br>
+				<div class="row">
+					<h4 class="col-xs-12">Login Information: </h4>
+
+					<div class="col-xs-4"  class="form-group">
+						<label for="usr">User Name:</label>
+						<input type="text" class="form-control" name="usr">
+					</div>
+					<div class="col-xs-4">
+						<label for="pwd">Password:</label>
+						<input type="password" class="form-control" name="pwd">
+					</div>
+				</div>
+				<br>
+				<br>
+				<div class="row">
+				<h4 class="col-xs-12">Payment Information (Membership fee: $20): </h4>
+				
+					<span class="payment-errors"></span>
+
+					<div class="col-xs-12"  class="form-group">
+						<label>
+							<span>Card Number</span>
+							<input type="text" size="20" data-stripe="number">
+						</label>
+					</div>
+
+					<div class="col-xs-12"  class="form-group">
+						<label>
+							<span>Expiration (MM/YY)</span>
+							<input type="text" size="2" data-stripe="exp_month">
+						</label>
+						<span> / </span>
+						<input type="text" size="2" data-stripe="exp_year">
+					</div>
+
+					<div class="col-xs-12"  class="form-group">
+						<label>
+							<span>CVC</span>
+							<input type="text" size="4" data-stripe="cvc">
+						</label>
+					</div>
+
+				</div>
+
+				<button id="submit" type="submit" class="btn btn-primary">Pay and Register</button>
+			</form>
+		</div>
+
+	</body>
+</html>
