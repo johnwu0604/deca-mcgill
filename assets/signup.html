@@ -37,6 +37,27 @@
 				border-radius: 6px;
 			}
 
+			label {
+				color: #fff;
+				font-family: Lato, sans-serif;
+				font-weight: lighter;
+			}
+
+			h2 {
+				color: #fff;
+				font-family: Lato, sans-serif;
+			}
+
+			h4 {
+				color: #fff;
+				font-family: Lato, sans-serif;
+				font-style: italic;
+			}
+
+			body {
+    		background-color: #333333;
+			}
+
 		</style>
 
 	</head>
@@ -86,52 +107,38 @@
                         <input type="text" name="username"><br>
                         <label name="pwd">Password:</label> 
                         <input type="password" name="pwd">
-                        <br>
-                    
+                        <br>                    
                         <button class="btn btn-default" type="submit" value="Submit" >Login</button>
             </form>
         
     </div>
 
 		<!-- form of information and payment -->
-
 		<div class="container">
 
 			<form action="cgi-bin/member_signup.py" method="get">
 
 				<div class="row">
 					<h2>Registration Form</h2>
-					<h4 class="col-xs-12">  Personal Information: </h4>
+					<hr width="99%">
+					<h4 class="col-xs-12">Personal Information: </h4>
 					<div class="col-xs-4">
-						<label for="pwd">First Name:</label>
+						<label for="pwd">First Name</label>
 						<input type="text" class="form-control" name="firstName">
 					</div>
 					<div class="col-xs-4">
-						<label for="pwd">Last Name:</label>
+						<label for="pwd">Last Name</label>
 						<input type="text" class="form-control" name="lastName">
 					</div>
 
 					<div class="col-xs-4">
-						<label for="pwd">Email Address:</label>
+						<label for="pwd">Phone Number</label>
 						<input type="text" class="form-control" name="email" id="email">
 					</div>
 
-					<div class="col-xs-6">
-						<label for="program">Faculty and Program:</label>
-						<input type="text" class="form-control" name="faculty" id="email">
-					</div>
-
-					<div class="col-xs-12">
-						<label for="pwd">Choose Your Category:</label>
-						
-						<br/>
-						<!-- Case Category to choose -->
-						<select name="category">
-							<option selected>Choose Category</option>
-							<option value="Human Resource">Human Resources</option>
-							<option value="Business Law"> Business Law</option>
-							<option value="Marketing"> Marketing </option>
-						</select>
+					<div class="col-xs-4">
+						<label for="pwd">Faculty</label>
+						<input type="text" class="form-control" name="email" id="email">
 					</div>
 				</div>
 				<br>
@@ -140,47 +147,22 @@
 					<h4 class="col-xs-12">Login Information: </h4>
 
 					<div class="col-xs-4"  class="form-group">
-						<label for="usr">User Name:</label>
+						<label for="usr">Email</label>
 						<input type="text" class="form-control" name="usr">
 					</div>
 					<div class="col-xs-4">
-						<label for="pwd">Password:</label>
+						<label for="pwd">Password</label>
+						<input type="password" class="form-control" name="pwd">
+					</div>
+					<div class="col-xs-4">
+						<label for="pwd">Confirm Password</label>
 						<input type="password" class="form-control" name="pwd">
 					</div>
 				</div>
 				<br>
 				<br>
-				<div class="row">
-				<h4 class="col-xs-12">Payment Information (Membership fee: $20): </h4>
-				
-					<span class="payment-errors"></span>
 
-					<div class="col-xs-12"  class="form-group">
-						<label>
-							<span>Card Number</span>
-							<input type="text" size="20" data-stripe="number">
-						</label>
-					</div>
-
-					<div class="col-xs-12"  class="form-group">
-						<label>
-							<span>Expiration (MM/YY)</span>
-							<input type="text" size="2" data-stripe="exp_month">
-						</label>
-						<span> / </span>
-						<input type="text" size="2" data-stripe="exp_year">
-					</div>
-
-					<div class="col-xs-12"  class="form-group">
-						<label>
-							<span>CVC</span>
-							<input type="text" size="4" data-stripe="cvc">
-						</label>
-					</div>
-
-				</div>
-
-				<button id="submit" type="submit" class="btn btn-primary">Pay and Register</button>
+				<button id="submit" type="submit" class="btn btn-primary">Register</button>
 			</form>
 		</div>
 
