@@ -1,30 +1,12 @@
-	<!DOCTYPE html>
-	<html lang="en">
+<!-- Default home page -->
 
-	<head>
-		<title>Membership SignUp</title>
-		<link href="favicon.png" rel="shortcut icon" />
-
-		<!-- CSS -->
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-		<link href="css/bootstrap.css" rel="stylesheet">
-		<link href="css/index_main.css" rel="stylesheet" type="text/css">
-
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
-		<!-- stripe.js: handle sensitive card data and return token -->
-		<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-		<!-- TO-DO: Replace key with actual publishable API key -->
-					<!-- Current: Test publishable API key -->
-		<script type="text/javascript"> Stripe.setPublishableKey('pk_test_uLu4FfUMxbGBLl3R5Wli1ssu'); </script>
-
-		<script type="text/javascript" src="js/index_main.js"></script>
-
-
-		<!--CSS test-->
-		<style>
-			button{
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
+<link href="favicon.png" rel="shortcut icon" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/index_main.css" rel="stylesheet" type="text/css">
+<style>
+button{
 				float: left;
 				margin-top: 2%;
 
@@ -58,14 +40,18 @@
     		background-color: #333333;
 			}
 
-		</style>
+</style>
+<script type="text/javascript">
+setTimeout(function sunrise () {
+  document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
+}, 0);
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript"> Stripe.setPublishableKey('pk_test_uLu4FfUMxbGBLl3R5Wli1ssu'); </script>
+<script type="text/javascript" src="js/index_main.js"></script>
 
-	</head>
-
-	<body>
-
-		<!-- top nav-bar -->
-		<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -73,11 +59,11 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>                        
 					</button>
-					<a class="navbar-brand" href="index.html">DECA McGill</a>
+					<a class="navbar-brand" href="/">DECA McGill</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="./signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+						<li class="active"><a href="./signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 
 						<li id="login-choice" ><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 					</ul>
@@ -88,13 +74,14 @@
 		 <!-- Login: FadeToggle Part -->
     <div id="login">
             <!-- Modal content-->
-            <form action="login.py" method="post">
-                        <label name="username">Username:</label> 
-                        <input type="text" name="username"><br>
+            <form action="/login" method="post">
+                        <label name="username">Email:</label> 
+                        <input type="email" name="email"><br>
                         <label name="pwd">Password:</label> 
-                        <input type="password" name="pwd">
-                        <br>                    
-                        <button class="btn btn-default" type="submit" value="Submit" >Login</button>
+                        <input type="password" name="password">
+                        <br>
+                    
+                        <button class="btn btn-default" type="submit" value="submit" >Login</button>
             </form>
         
     </div>
@@ -102,7 +89,7 @@
 		<!-- form of information and payment -->
 		<div class="container">
 
-			<form action="delegate_portal.html">
+			<form action="/user" method="post">
 
 				<div class="row">
 					<h2>Registration Form</h2>
@@ -119,12 +106,12 @@
 
 					<div class="col-xs-4">
 						<label for="pwd">Phone Number</label>
-						<input type="text" class="form-control" name="email" id="email">
+						<input type="text" class="form-control" name="phoneNumber" id="phoneNumber">
 					</div>
 
 					<div class="col-xs-4">
 						<label for="pwd">Faculty</label>
-						<input type="text" class="form-control" name="email" id="email">
+						<input type="text" class="form-control" name="faculty" id="faculty">
 					</div>
 				</div>
 				<br>
@@ -134,15 +121,15 @@
 
 					<div class="col-xs-4"  class="form-group">
 						<label for="usr">Email</label>
-						<input type="text" class="form-control" name="usr">
+						<input type="text" class="form-control" name="email">
 					</div>
 					<div class="col-xs-4">
 						<label for="pwd">Password</label>
-						<input type="password" class="form-control" name="pwd">
+						<input type="password" class="form-control" name="password">
 					</div>
 					<div class="col-xs-4">
 						<label for="pwd">Confirm Password</label>
-						<input type="password" class="form-control" name="pwd">
+						<input type="password" class="form-control" name="confirmation">
 					</div>
 				</div>
 				<br>
@@ -150,6 +137,3 @@
 				<button id="submit" type="submit" class="btn btn-primary">Register</button>
 			</form>
 		</div>
-
-	</body>
-</html>

@@ -11,8 +11,6 @@
 
 module.exports.models = {
 
-  connection: "hostedDB",
-  migrate : "drop"
   /***************************************************************************
   *                                                                          *
   * Your app's default connection. i.e. the name of one of your app's        *
@@ -29,6 +27,6 @@ module.exports.models = {
   * See http://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
   *                                                                          *
   ***************************************************************************/
-  // migrate: 'alter'
+  migrate: 'drop'
 
 };

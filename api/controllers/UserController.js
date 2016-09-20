@@ -6,6 +6,26 @@
  */
 
 module.exports = {
-	
+	create: function (req,res){
+		var userObject = req.body;
+		sails.log.debug(userObject.email);
+		if(userObject.confirmation === userObject.password)
+		{
+			sails.log.debug("error");
+			User.create(req.body)
+			.exec(function(err, user){
+				if(err) 
+					{return res.view("homepage",err);}
+				sails.log.debug(user);
+				res.ok();		
+			});
+		}
+		else
+		{
+			var error = "Password does not match"
+			res.view("signup",error);
+		}
+		return res.view("homepage");
+	}
 };
 

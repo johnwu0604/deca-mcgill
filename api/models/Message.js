@@ -8,7 +8,19 @@
 module.exports = {
 
   attributes: {
-
+    user: {
+      type: 'string'
+    },
+    message: {
+      type: 'string'
+    },
+    feed: {
+    	type: 'string'
+    }
+  },
+  afterCreate: function(entry, cb) {
+    sails.sockets.broadcast('feed', 'new_entry', entry);
+    cb();
   }
 };
 

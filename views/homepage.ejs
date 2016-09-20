@@ -1,74 +1,427 @@
 <!-- Default home page -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
-<style>
-  /* Styles included inline since you'll probably be deleting this page anyway */
-  html,body{text-align:left;font-size:1em}html,body,img,form,textarea,input,fieldset,div,p,div,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,code{margin:0;padding:0}ul,li{list-style:none}img{display:block}a img{border:0}a{text-decoration:none;font-weight:normal;font-family:inherit}*:active,*:focus{outline:0;-moz-outline-style:none}h1,h2,h3,h4,h5,h6{font-weight:normal}div.clear{clear:both}.clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden}body{font-family:"Open Sans",Arial,sans-serif;font-weight:300;}.top-bar {width: 100%; background-color: #e4f0f1; padding: 15px 0;}.top-bar .container img {float: left;}.top-bar .container ul {float: right; padding-top: 25px;}.top-bar .container li {float: left; width: 125px; text-align: center; font-size: 15px; color:#000; font-weight: 600;}.top-bar .container a li:hover {color: #118798; -webkit-transition:color 200ms; -moz-transition:color 200ms; -o-transition:color 200ms;transition:color 200ms;}.container{width: 80%; max-width: 1200px; margin: auto;}div.header {-webkit-transition: 6s; -moz-transition: 6s; -o-transition: 6s;transition: 6s; background: rgba(4, 36, 41, 0.89) url(http://sailsjs.org/images/img_sailsShadow.png) no-repeat 42% bottom; padding: 100px 0 65px;}.header h1#main-title{color: #fff; font-weight: 300; font-size: 2.5em;}.header h3{color: #b1eef7; font-style: italic; font-weight: 300;}.header h3 code{font-style: normal!important; background-color: rgba(255,255,255,0.5); font-weight: 300; color:#0e6471; margin: 0px 5px;}div.main.container{padding: 50px 0;}h1 {color: #118798; font-weight: 300;}code {font-size: inherit; font-family: 'Consolas', 'Monaco', monospace; padding:4px 5px 1px; background-color: #f3f5f7}a{color: #118798; font-weight: 300; text-decoration: underline;}a:hover {color: #0e6471; -webkit-transition:color 200ms; -moz-transition:color 200ms; -o-transition:color 200ms;transition:color 200ms;}p{line-height: 1.5em;}blockquote{background-color: #e4f0f1; padding: 25px; line-height: 1.5em; margin: 15px 0;}blockquote span{font-weight: 600; padding-right: 5px;}ul.getting-started{padding: 25px 75px 25px 0; width: 70%; float: left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}ul.getting-started li{padding: 25px 0;}ul.getting-started li h3 {padding-bottom: 10px; font-size: 25px; font-weight: 300;}.sprite{background:url(http://sailsjs.org/images/newapp.sprite.png) no-repeat; position: absolute; left: 0; top:0;}.getting-started .sprite{margin-left:10px;padding-left:60px;height:42px;width:0; float: left;}.getting-started .one{background-position:0 0}.getting-started .two{background-position:0 -42px}.getting-started .three{background-position:0 -83px}div.step {position: relative; padding-left: 70px; opacity: 0.9;}div.step:hover{ opacity: 1;}div.links {float: left; width: 30%; max-width: 325px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #f3f5f7; border: 1px solid #ebebeb; padding: 25px 45px 35px;}div.links h3 {color: #727272; text-align: center; font-size: 28px; font-weight: 300;}div.links h4 {color: #727272; font-size: 17px; font-weight: 600; padding: 15px 0 10px;}div.links .link-list a {text-decoration: none; font-weight: 400;}div.links .link-list a li {padding: 0px 0px 5px 10px;}div.default-page{min-width: 1200px;}.pocket{display:none;}
-</style>
-<script type="text/javascript">
-setTimeout(function sunrise () {
-  document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
-}, 0);
+<link href="favicon.png" rel="shortcut icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/index_main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.theme.css">
+
+<style> </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $("#team2").owlCarousel({
+
+          autoPlay: false,
+
+          items : 5,
+          itemsDesktop : [1199,3],
+          itemsDesktopSmall : [979,3]
+
+      });
+
+    });
 </script>
+<script type="text/javascript" src="js/index_main.js"></script>
 
-<div class="default-page">
-  <div class="header">
-    <h1 id="main-title" class="container"><%= __('A brand new app.') %></h1>
-    <h3 class="container">You're looking at: <code><%= view.pathFromApp + '.' +view.ext %></code></h3>
-  </div>
-  <div class="main container clearfix">
-    <!-- <h1>Getting started</h1>
-    <p>Don't worry, we've got your back.</p> -->
-    <ul class="getting-started">
-      <li class="clearfix">
-        <div class="step">
-          <div class="sprite one"></div>
-          <h3>Generate a REST API.</h3>
-          <p>
-            Run <code>sails generate api user</code>.  This will create two files: a <a href="http://sailsjs.org/#!/documentation/concepts/ORM/Models.html">model</a> <code class="pocket">api/models/User.js</code> and a <a href="http://sailsjs.org/#!/documentation/concepts/Controllers">controller</a><code class="pocket">api/controllers/UserController.js</code>.
-          </p>
-        </div>
-      </li>
-      <li class="clearfix">
-        <div class="step">
-          <div class="sprite two"></div>
-          <h3>
-            Lift your app.
-          </h3>
-          <p>
-            Run <code>sails lift</code> to start up your app server.  If you visit <a target="_blank" href="http://localhost:<%= sails.config.port || 1337%>/user"><code>http://localhost:<%= sails.config.port || 1337%>/user</code></a> in your browser, you'll see a <a href="http://sailsjs.org/#!/documentation/reference/blueprint-api">WebSocket-compatible</a> user API.
-          </p>
-        </div>
-      </li>
-      <li class="clearfix">
-        <div class="step">
-          <div class="sprite three"></div>
-          <h3>
-            Dive in.
-          </h3>
-          <p>Blueprints are just the beginning.  You'll probably also want to learn how to customize your app's <a href="http://sailsjs.org/#!/documentation/concepts/Routes">routes</a>, set up <a href="http://sailsjs.org/#!/documentation/concepts/Policies">security policies</a>, configure your <a href="http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.connections.html">data sources</a>, and build custom <a target="_blank" href="http://sailsjs.org/#!/documentation/concepts/Controllers?q=actions">controller actions</a>. For more help getting started, check out the links on this page.</p>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="/">DECA McGill</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="sign-up"><a href="./signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 
-        </div>
-      </li>
-    </ul>
-    <div class="links">
-      <!-- <h3>Links</h3> -->
-      <ul class="link-list">
+                    <li id="login-choice" ><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div> <!-- end container -->
+    </nav>
 
-        <h4>Docs</h4>
-        <a target="_blank" href="http://sailsjs.org/#!/documentation/anatomy/myApp"><li>App Structure</li></a>
-        <a target="_blank" href="http://sailsjs.org/#!/documentation/reference"><li>Reference</li></a>
-        <a target="_blank" href="http://sailsjs.org/#!/documentation/concepts/extending-sails/Adapters/adapterList.html"><li>Supported Databases</li></a>
 
-        <h4>Tutorials</h4>
-        <a target="_blank" href="https://github.com/sails101"><li>Sails 101</li></a>
-
-        <h4>Community</h4>
-        <a target="_blank" href="http://stackoverflow.com/search?q=sails.js"><li>StackOverFlow</li></a>
-        <a target="_blank" href="https://github.com/balderdashy/sails"><li>GitHub</li></a>
-        <a target="_blank" href="https://groups.google.com/forum/#!forum/sailsjs"><li>Google Group</li></a>
-        <a target="_blank" href="http://webchat.freenode.net/"><li>IRC (#sailsjs on freenode)</li></a>
-
-      </ul>
+    <!-- Login: FadeToggle Part -->
+    <div id="login">
+            <!-- Modal content-->
+            <form action="/login" method="POST">
+                        <label name="username">Email:</label> 
+                        <input type="email" name="email"><br>
+                        <label name="pwd">Password:</label> 
+                        <input type="password" name="password">
+                        <br>
+                    
+                        <button class="btn btn-default" type="submit" value="submit" >Login</button>
+            </form>
+        
     </div>
+
+
+
+    <nav class="navbar top navbar-inverse" role="navigation">
+        <br>
+        <br>
+        <div class="section-header">
+            <h2>Welcome to
+                <h1 class="hidden-xs hidden-sm">Deca McGill</h1><h7 class="hidden-lg">Deca McGill</h7>
+                <h5><em>Networking - Leadership - Professional Development</em></h5>
+                <div class="fancy hidden-xs hidden-sm"><span><img src="img/logos/logo.png" width="20%" alt="..."></span></div>
+                <br><br>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+
+  <!-- Intro
+  ================================================== -->
+  <div id="intro">
+    <div class="container"> <!-- container -->
+        <br>
+        <div class="section-header sub"><h1>Intro</h1></div>
+        <div class="row"> <!-- row -->
+            <div class="col-md-8 col-md-offset-2"> 
+                <br><p>DECA McGill challenges emerging leaders and entrepreneurs to improve themselves. We strive to provide our delegates with valuable experiences they can use in pursuit of their career and life goals. We are able to accomplish this through professional development workshops, networking events, and case competitions.</p>
+            </div>
+
+        </div><!-- end row -->
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-6">
+                <div class="about-item scrollpoint sp-effect2">
+                    <span class="highlight"><i class="fa fa-globe fa-2x"></i></span>
+                    <h3>Networking</h3>
+                    <p>Prepare yourself for the future by
+                        <br>building your connections now.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6">
+                    <div class="about-item scrollpoint sp-effect5">
+                        <span class="highlight"><i class="fa fa-users fa-2x center"></i></span>
+                        <h3>Leadership</h3>
+                        <p>Learn the ability to translate visions
+                            <br> and goals into reality.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <div class="about-item scrollpoint sp-effect5">
+                            <span class="highlight"><i class="fa fa-signal fa-2x"></i></span>
+                            <h3>Professional Development</h3>
+                            <p>Create the skills that will lead to your
+                                <br> ultimate success.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- end container -->
+            </div>
+
+<div id="register">
+        <div class="container"> <!-- container -->
+            <div class="section-header sub"><h1>Our strategy</h1></div>
+            <div class="row"> <!-- row -->
+                <div class="col-md-8 col-md-offset-2"> 
+                    <br>
+                    <p align="center">At DECA McGill, we follow two essential strategies to develop our delegates.</p><br>
+                    <h3 align="left"><a class="white">1) Professional Development Events</a></h3>
+                    <p align="left">Throughout the year, we aim to host bi-weekly professional development
+                    events ranging from case cracking essentials to learning how to build a proper resume. The purpose of these events is to develop specific skills which our delegates can immediately benefit from.</p><br>
+                    <h3 align="left"><a class="white">2) Case Competitions</a></h3>
+                    <p align="left">DECA McGill hosts two major case competitions each year. A McGill exclusive fall competition, and a nationwide spring invitational. Our delegates also have the opportunity to other exclusive competitions as well, including the DECA Ontario Provincials.</p><br>reset.css
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div>
+  </div>
+
+
+
+
+
+    <!-- Team Section 
+!!!TO-DO: Replace photos
+================================================== -->
+<div id="team">
+    <div class="container"> <!-- container -->
+        <div class="section-header sub"><h1>The Team</h1></div>
+
+        <div id="team2" class="owl-carousel owl-theme text-center"> <!-- team carousel wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/john.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>John Wu</h3>
+                    <p>Co-President</p>
+                    <ul class="list-inline social"> 
+                        <li><a href="https://ca.linkedin.com/in/john-wu-3b262bb2" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:president@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/jillian.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>Jillian Shao</h3>
+                    <p>Co-President</p>
+                    <ul class="list-inline social"> 
+                        <li><a href="https://www.linkedin.com/in/jillianshao" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:president@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/herman.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>Herman Tubungbanua</h3>
+                    <p>VP Communications</p>
+                    <ul class="list-inline social"> 
+                        <li><a href="https://www.linkedin.com/in/herman-tubungbanua-43a126ba" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:communications@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/wynn.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3 style="font-size:9px;">Wyn Sutuntivorakoon</h3>
+                    <p>VP Internal</p>
+                    <ul class="list-inline social"> 
+                        <li><a href="https://www.linkedin.com/in/herman-tubungbanua-43a126ba" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:communications@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/ahmad.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>Ahamd Hassan</h3>
+                    <p>VP Finance</p>
+                    <ul class="list-inline social"> 
+                        <li><a href="" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:finance@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/chris.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>Christopher Ly</h3>
+                    <p>VP External</p>
+                    <ul class="list-inline social"> 
+                        <li><a href="https://ca.linkedin.com/in/christopher-ly-399035115" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:external@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/uday.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>Uday Sahni</h3>
+                    <p>Technical Director</p>
+                    <ul class="list-inline social"> 
+                        <li><a href="https://ca.linkedin.com/in/uday-sahni-478171106" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:tech@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/jing.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>Jing Liu</h3>
+                    <p>Technical Director</p>
+                    <ul class="list-inline social"> 
+                        <li><a href="https://ca.linkedin.com/in/jingyun-liu-449b23b2/en" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:tech@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/mukit.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>Mukit Bin Momin</h3>
+                    <p>Events Coordinator</p>
+                    <ul class="list-inline social"> 
+                        <li><a href="https://ca.linkedin.com/in/mukit-bin-momin-812926109" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:mukit.momin@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/victoria.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>Victoria Liang</h3>
+                    <p>Events Coordinator</p>
+                    <ul class="list-inline social"> 
+                        <li><a href="https://ca.linkedin.com/in/yunyu-liang-ba3923a1/en" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:victoria.liang@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/jordan.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>Jordin Sinder</h3>
+                    <p>Events Coordinator</p>
+                    <ul class="list-inline social"> 
+                        <li><a href="" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:jordan.sinder@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/kirah.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>Kirah Goldberg</h3>
+                    <p>Events Coordinator</p>
+                    <ul class="list-inline social"> 
+                        <!---LINKS-->
+                        <li><a href="https://ca.linkedin.com/in/kirah-goldberg-9bb88a10b" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:kirah.goldberg@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/nikita.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>Nikita Lisitsyn</h3>
+                    <p>Events Coordinator</p>
+                    <ul class="list-inline social"> 
+                        <!---LINKS-->
+                        <li><a href="https://ca.linkedin.com/in/nikitalisitsyn" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:nikita.lisitsyn@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- End Team Wrapper -->
+
+            <div class="item">
+                <div class="hover-bg"> <!-- Team Wrapper -->
+                </div><!-- End Hover Description -->
+                <img src="img/team/matt.jpg" alt="..." class="img-responsive"> <!-- Team Image -->
+                <div class="team-detail text-center">
+                    <h3>Matthew Yaremko</h3>
+                    <p>Events Coordinator</p>
+                    <ul class="list-inline social"> 
+                        <!---LINKS-->
+                        <li><a href="" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:matthew.yaremko@decamcgill.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div><!-- End Team Wrapper -->
+
+
+    </div> <!-- end team carousel wrapper -->
+
+</div> <!-- container -->
+</div>
+
+
+
+
+  <!-- Sponsors
+  ================================================== -->
+  <div id="sponsors">
+    <div class="container"> <!-- container -->
+        <div class="section-header sub"><h1>Sponsors</h1></div>
+        <div class="row"> <!-- row -->
+            <div class="col-md-8 col-md-offset-2"> 
+                    <img src="img/logos/ssmu.png" width="25%">
+                    <br>
+                    <br>
+                    Interested in working with us? <a href="/sponsorship.pdf">Sponsorship package</a>
+                </p>
+            </div>
+
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div>
+
+</div>
+<!--footer class-->
+<div class="footer">
+    <div class="text-center">
+        <h6 class="h5 space-4 hide-sm">Join Us On</h6>
+
+        
+        <a href="https://www.facebook.com/DECA.McGill/?fref=ts" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
+            <span class="screen-reader-only">Facebook</span>
+            <i class='icon footer-icon icon-facebook'></i>
+        </a>        
+        
+        
+
+        
+        <a href="https://www.linkedin.com/company/2648081?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A2648081%2Cidx%3A2-1-2%2CtarId%3A1463941262138%2Ctas%3Adeca%20mcgill" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
+          <span class="screen-reader-only">LinkedIn</span>
+          <i class='icon footer-icon icon-linkedin'></i>
+      </a>      
+
+
+
+      <a href="mailto:president@decamcgill.com" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
+          <span class="screen-reader-only">Email</span>
+          <i class='icon footer-icon icon-instagram'></i>
+      </a>       
+
+      <div class="space-top-2 text-muted">
+          &copy; DECA McGill.
+      </div>
   </div>
 </div>
