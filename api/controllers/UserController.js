@@ -9,7 +9,7 @@ module.exports = {
 	create: function (req,res){
 		var userObject = req.body;
 		sails.log.debug(userObject.email);
-		if(userObject.confirmation === userObject.password)
+		if(userObject.confirmation === userObject.password && userObject.password != "" && userObject.email != "" && userObject.firstName != "" && userObject.lastName != "" && userObject.faculty != "" && userObject.phoneNumber != "")
 		{
 			sails.log.debug("error");
 			User.create(req.body)

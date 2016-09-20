@@ -39,6 +39,7 @@ module.exports = {
 	    	var obj = this.toObject();
 	    	delete obj.password;
 	    	delete obj.confirmation;
+	    	delete obj.phoneNumber;
 	    	return obj;
 	    }	
   },

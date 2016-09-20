@@ -90,15 +90,10 @@
             <div class="row"> <!-- row -->
                 <div class="col-md-8 col-md-offset-2"> 
                     <br>
-                    <h3 align="left"><a class="white">Sept 1, 2016</a></h3>
-                    <p align="left">Come check us out at activities night Tuesday, Wednesday, and Thursday!</p><br>
-                    <h3 align="left"><a class="white">Sept 3, 2016</a></h3>
-                    <p align="left">First event is coming up soon, stay tuned for details!</p><br>
-                    <h3 align="left"><a class="white">Sept 6, 2016</a></h3>
-                    <p align="left">If you have any suggestions on professional development workshops which you would like to see,
-                        please do not hesitate to contact us!</p><br>
-                    <h3 align="left"><a class="white">Sept 9, 2016</a></h3>
-                    <p align="left">Information session happening next week Tuesday and Wednesday in Bronfmon 151.</p><br>
+                    <% for (var l = 0; l<announcement.length; l++) { %>   
+                    <h3 align="left"><a class="white"><%= announcement[l].date %></a></h3>
+                    <p align="left"><%= announcement[l].description %></p><br>
+                    <% } %>
             </div><!-- end row -->
         </div><!-- end container -->
     </div>
@@ -113,62 +108,21 @@
         <div class="row"> <!-- row -->
             <div class="col-md-8 col-md-offset-2"> 
                     <section id="cd-timeline" class="cd-container">
+
+        <% for (var k = 0; k<events.length; k++) { %>                       
         <div class="cd-timeline-block">
             <div class="cd-timeline-img cd-picture">
             </div> <!-- cd-timeline-img -->
 
             <div class="cd-timeline-content">
-                <h2>In-House Case Competition</h2>
+                <h2><%= events[k].name %></h2>
                 <hr width="99%">
-                <p style="color:#fff; text-align: left; font-size:12px;"><strong>Date:</strong> November 1, 2016 <br><strong>Time:</strong> 12pm - 6pm <br><strong>Location:</strong> Brown Building 
-                    <br><strong>Description:</strong> Our annual Fall In-House Case Competition. Open to all McGill students. This is your
-                    chance to test the skills which you have been developing through our workshops!</p><br>
+                <p style="color:#fff; text-align: left; font-size:12px;"><strong>Date:</strong> <%= events[k].date %> <br><strong>Time:</strong> <%= events[k].time %> <br><strong>Location:</strong> <%= events[k].location %> 
+                    <br><strong>Description:</strong> <%= events[k].description %> </p><br>
                 <a href="#0" class="cd-read-more">More Information</a>
             </div> <!-- cd-timeline-content -->
         </div> <!-- cd-timeline-block -->
-
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-picture">
-            </div> <!-- cd-timeline-img -->
-
-            <div class="cd-timeline-content">
-                <h2>In-House Case Competition</h2>
-                <hr width="99%">
-                <p style="color:#fff; text-align: left; font-size:12px;"><strong>Date:</strong> November 1, 2016 <br><strong>Time:</strong> 12pm - 6pm <br><strong>Location:</strong> Brown Building 
-                    <br><strong>Description:</strong> Our annual Fall In-House Case Competition. Open to all McGill students. This is your
-                    chance to test the skills which you have been developing through our workshops!</p><br>
-                <a href="#0" class="cd-read-more">More Information</a>
-            </div> <!-- cd-timeline-content -->
-        </div> <!-- cd-timeline-block -->
-
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-picture">
-            </div> <!-- cd-timeline-img -->
-
-            <div class="cd-timeline-content">
-                <h2>In-House Case Competition</h2>
-                <hr width="99%">
-                <p style="color:#fff; text-align: left; font-size:12px;"><strong>Date:</strong> November 1, 2016 <br><strong>Time:</strong> 12pm - 6pm <br><strong>Location:</strong> Brown Building 
-                    <br><strong>Description:</strong> Our annual Fall In-House Case Competition. Open to all McGill students. This is your
-                    chance to test the skills which you have been developing through our workshops!</p><br>
-                <a href="#0" class="cd-read-more">More Information</a>
-            </div> <!-- cd-timeline-content -->
-        </div> <!-- cd-timeline-block -->
-
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-picture">
-            </div> <!-- cd-timeline-img -->
-
-            <div class="cd-timeline-content">
-                <h2>In-House Case Competition</h2>
-                <hr width="99%">
-                <p style="color:#fff; text-align: left; font-size:12px;"><strong>Date:</strong> November 1, 2016 <br><strong>Time:</strong> 12pm - 6pm <br><strong>Location:</strong> Brown Building 
-                    <br><strong>Description:</strong> Our annual Fall In-House Case Competition. Open to all McGill students. This is your
-                    chance to test the skills which you have been developing through our workshops!</p><br>
-                <a href="#0" class="cd-read-more">More Information</a>
-            </div> <!-- cd-timeline-content -->
-        </div> <!-- cd-timeline-block -->
-
+        <% } %>
     </section> <!-- cd-timeline -->
             </div>
         </div>
@@ -183,12 +137,10 @@
             <div class="row"> <!-- row -->
                 <div class="col-md-8 col-md-offset-2"> 
                     <br>
-                    <h3 align="left"><a href=""class="white">DECA McGill Case Bank</a></h3>
-                    <p align="left">An archive of business cases for you to practice for that next interview or our competition.</p><br>
-                    <h3 align="left"><a href="" class="white">Professional Development #1: Case Cracking 101</a></h3>
-                    <p align="left">Powerpoint from our first professional development event hosted by Professor Donovon.</p><br>
-                    <h3 align="left"><a href="" class="white">Professional Development #2: Excel/SQL Basics</a></h3>
-                    <p align="left">Notes from our Excel/SQL basics hosted by Flatbook.</p><br>
+                     <% for (var j = 0; j<documents.length; j++) { %>
+                    <h3 align="left"><a href=""class="white"><%= documents[j].name %></a></h3>
+                    <p align="left"><%= documents[j].description</p><br>
+                    <% } %>
             </div><!-- end row -->
         </div><!-- end container -->
     </div>
@@ -208,10 +160,12 @@
                         <td><h3 align="center"><a href=""class="white">Name</a></h3></td>
                         <td><h3 align="center"><a href=""class="white">Email</a></h3></td>
                     </tr>
+                    <% for (var i = 0; i<users.length; i++) { %>
                     <tr>
-                        <td><h3 align="center">John Wu</h3></td>
-                        <td><h3 align="center">john.wu@mail.mcgill.ca</h3></td>
+                        <td><h3 align="center"><%= users[i].firstName %> <%= users[i].lastName %></h3></td>
+                        <td><h3 align="right"><%= users[i].email %></h3></td>
                     </tr>
+                    <% } %>
                 </table>
             </div>
         </div>

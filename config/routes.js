@@ -37,7 +37,7 @@ module.exports.routes = {
 
   '/signup' : {view: 'signup'},
 
-  '/delegateportal' : {view:'delegateportal'},
+  '/delegateportal' : 'DelegatePortalController.show',
 
   '/' : {view:'homepage'},
 
