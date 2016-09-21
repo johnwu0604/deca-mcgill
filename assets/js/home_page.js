@@ -1,8 +1,8 @@
 /*********Side-bar Click Functions*******************/
-     //Home Landing Page 
+     //Home Landing Page
      $(".container").not(document.getElementById("main")).hide();
 
-    //Events show 
+    //Events show
     $("#Events").click(function(){
       $("#timeline").parent().parent().show();
       $(".container").not(document.getElementById("event_cont")).hide();
@@ -51,7 +51,7 @@
 
      /*********Side-bar Functions End*******************/
 
-     //Menu Toggle Script 
+     //Menu Toggle Script
      $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
@@ -66,7 +66,7 @@ $(".glyphicon-remove").click(function(){
 //delete button click: change the value in the delete modal form
 $("button.remove").click(function(e){
   e.preventDefault;
-  var value=$(this).attr("id"); 
+  var value=$(this).attr("id");
   $("#postID").val(value);
 });
 
@@ -85,7 +85,7 @@ $("button.remove").click(function(e){
 
   $('#del_btn').submit(function(e){
     e.preventDefault();
-    
+
     var formData = $(this).serialize();
     var button_id = $(this).attr("id");
     $.ajax({
