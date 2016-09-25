@@ -28,12 +28,8 @@ module.exports.policies = {
 
   '*': true,
 
-  /*'DelegatePortalController': {
+  'DelegatePortalController': {
   	'*': 'isAuthenticated'
-  },
-
-  'UserController': {
-    '*': 'isAuthenticated'
   },
 
   'EventController': {
@@ -42,7 +38,12 @@ module.exports.policies = {
 
   'DocumentController': {
     '*': 'isAuthenticated'
-  }*/
+  },
+
+  'AnnouncementController' : {
+    '*': 'isAuthenticated'
+  }
+
 
   /***************************************************************************
   *                                                                          *

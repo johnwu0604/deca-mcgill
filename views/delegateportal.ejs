@@ -90,9 +90,9 @@
             <div class="row"> <!-- row -->
                 <div class="col-md-8 col-md-offset-2"> 
                     <br>
-                    <% for (var l = 0; l<announcement.length; l++) { %>   
-                    <h3 align="left"><a class="white"><%= announcement[l].date %></a></h3>
-                    <p align="left"><%= announcement[l].description %></p><br>
+                    <% for (var l = 0; l<announcements.length; l++) { %>   
+                    <h3 align="left"><a class="white"><%= announcements[l].date %></a></h3>
+                    <p align="left"><%= announcements[l].description %></p><br>
                     <% } %>
             </div><!-- end row -->
         </div><!-- end container -->
@@ -139,7 +139,7 @@
                     <br>
                      <% for (var j = 0; j<documents.length; j++) { %>
                     <h3 align="left"><a href=""class="white"><%= documents[j].name %></a></h3>
-                    <p align="left"><%= documents[j].description</p><br>
+                    <p align="left"><%= documents[j].description %></p><br>
                     <% } %>
             </div><!-- end row -->
         </div><!-- end container -->

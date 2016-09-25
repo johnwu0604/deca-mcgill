@@ -12,31 +12,34 @@ module.exports = {
 		var events = "";
 		var documents = "";
 		async.parallel([
-			function(callback) {
-				User.query('SELECT * FROM user' , function(err,result){
-					if(err) return next(err);
-					callback(null,result);
-			})},
-			function(callback){
-				Event.query('SELECT * FROM event', function(err,result){
-					if(err) return next(err);
-					callback(null,result);
-			})},
-			function(callback){
-				Document.query('SELECT * FROM document', function(err,result){
-					if(err) return next(err);
-					callback(null,result);
-			})},
-			function(callback){
-				Announcement.query('SELECT * FROM announcement', function(err,result){
-					if(err) return next(err);
-					callback(null,result);
-			})}
+				function(callback) {
+					User.query('SELECT * FROM user' , function(err,result){
+						if(err) return next(err);
+						callback(null,result);
+				});
+			},
+				function(callback){
+					Event.query('SELECT * FROM event', function(err,result){
+						if(err) return next(err);
+						callback(null,result);
+				});
+			},
+				function(callback){
+					Document.query('SELECT * FROM document', function(err,result){
+						if(err) return next(err);
+						callback(null,result);
+				});
+			},
+				function(callback){
+					Announcement.query('SELECT * FROM announcement', function(err,result){
+						if(err) return next(err);
+						callback(null,result);
+				});
+			}	
 			],
 			function(err,results){
 				console.log(results);
-				console.log("wtf");
-				return res.view("delegateportal",{users:results[0], events:results[1],documents:results[2],announcements:results[3]});
+				return res.view("delegateportal",{users:results[0], events:results[1], documents:results[2], announcements:results[3]});
 			});
 	}
 };

@@ -16,20 +16,14 @@ module.exports = {
     },
 
     login: function(req, res) {
-
         passport.authenticate('local', function(err, user, info) {
             if ((err) || (!user)) {
-                return res.send({
-                    message: info.message,
-                    user: user
-                });
+                req.flash('message',"Your login attempt was unsuccesful. Please make sure you are using the correct credentials or register below!");
+                return res.view("signup");
             }
             req.logIn(user, function(err) {
                 if (err) res.send(err);
-                return res.send({
-                    message: info.message,
-                    user: user
-                });
+                return res.redirect('/delegateportal');
             });
 
         })(req, res);

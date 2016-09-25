@@ -41,7 +41,37 @@ module.exports.routes = {
 
   '/' : {view:'homepage'},
 
-  'post /user' : 'UserController.create'
+  'post /user' : 'UserController.create',
+
+  'get /user' : {response: 'forbidden'},
+
+  'put /user' : {response: 'forbidden'},
+
+  'delete /user' : {response: 'forbidden'},
+
+  'post /document' : {response: 'forbidden'},
+
+  'get /document' : {response: 'forbidden'},
+
+  'put /document' : {response: 'forbidden'},
+
+  'delete /document' : {response: 'forbidden'},
+
+  'post /event' : {response: 'forbidden'},
+
+  'get /event' : {response: 'forbidden'},
+
+  'put /event' : {response: 'forbidden'},
+
+  'delete /event' : {response: 'forbidden'},
+
+  'post /announcement' : {response: 'forbidden'},
+
+  'get /announcement' : {response: 'forbidden'},
+
+  'put /announcement' : {response: 'forbidden'},
+
+  'delete /announcement' : {response: 'forbidden'},
   
 
   /***************************************************************************
