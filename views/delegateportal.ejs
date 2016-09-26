@@ -138,7 +138,7 @@
                 <div class="col-md-8 col-md-offset-2"> 
                     <br>
                      <% for (var j = 0; j<documents.length; j++) { %>
-                    <h3 align="left"><a href=""class="white"><%= documents[j].name %></a></h3>
+                    <h3 align="left"><a href="<%= documents[j].link %>"class="white"><%= documents[j].name %></a></h3>
                     <p align="left"><%= documents[j].description %></p><br>
                     <% } %>
             </div><!-- end row -->
@@ -155,14 +155,14 @@
         <div class="section-header sub"><h1>Delegate Contact List</h1></div>
         <div class="row"> <!-- row -->
             <div class="col-md-8 col-md-offset-2"> 
-                <table>
+                <table width="600">
                     <tr>
                         <td><h3 align="center"><a href=""class="white">Name</a></h3></td>
                         <td><h3 align="center"><a href=""class="white">Email</a></h3></td>
                     </tr>
                     <% for (var i = 0; i<users.length; i++) { %>
                     <tr>
-                        <td><h3 align="center"><%= users[i].firstName %> <%= users[i].lastName %></h3></td>
+                        <td><h3 align="left"><%= users[i].firstName %> <%= users[i].lastName %></h3></td>
                         <td><h3 align="right"><%= users[i].email %></h3></td>
                     </tr>
                     <% } %>
