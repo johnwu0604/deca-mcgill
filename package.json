@@ -30,7 +30,7 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "npm cache clean"
+    "start": "sails lift"
   },
   "main": "app.js",
   "repository": {
