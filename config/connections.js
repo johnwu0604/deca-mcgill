@@ -36,6 +36,8 @@ module.exports.connections = {
     database: 'decamcgilldashboarddb'
   }*/
 
+  'default': 'hostedDB',
+
   hostedDB: {
     adapter: 'sails-mysql',
     host: 'sql.decamcgill.com',
