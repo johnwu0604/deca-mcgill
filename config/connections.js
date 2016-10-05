@@ -40,7 +40,7 @@ module.exports.connections = {
 
   hostedDB: {
     adapter: 'sails-mysql',
-    host: 'localhost',
+    host: 'sql.decamcgill.com',
     user: 'decamcgill',
     password: '$%fscxa`a@',
     database: 'decamcgilldashboarddb'
