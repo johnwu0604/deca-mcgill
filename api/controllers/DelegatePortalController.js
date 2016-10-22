@@ -19,7 +19,7 @@ module.exports = {
 				});
 			},
 				function(callback){
-					Event.query('SELECT * FROM event', function(err,result){
+					Event.query('SELECT * FROM event ORDER BY id DESC', function(err,result){
 						if(err) return next(err);
 						callback(null,result);
 				});
@@ -31,7 +31,7 @@ module.exports = {
 				});
 			},
 				function(callback){
-					Announcement.query('SELECT * FROM announcement', function(err,result){
+					Announcement.query('SELECT * FROM announcement ORDER BY id DESC', function(err,result){
 						if(err) return next(err);
 						callback(null,result);
 				});
